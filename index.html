@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <div class="container">
+      <div class="form-box">
+        <h1 id="title">Sign Up</h1>
+        <form>
+            <div class="input-group" id="nameField">
+                <div class="input-field">
+                  
+                    <input type="text" placeholder="Name">
+                </div>
+            </div>
+              
+            <div class="input-field" >
+                <div class="input-field">
+                    <input type="email" placeholder="email">
+                </div>
+            </div>
+
+            <div class="input-field">
+                <div class="input-field">
+            
+                    <input type="password" placeholder="password">
+                </div>
+                <p>Lost password <a href="Click here!"></a></p>    
+            </div>
+            <div class="btn-field">
+                <button type="button" id="signupBtn">Sign up</button>
+                <button type="button"id="signinBtn" class="disable">Sign in</button>
+            </div>
+        </form>
+      </div>
+    </div>
+    <img src="./img/jsimg.jpg" alt="">
+
+
+    <script>
+        let signupBtn = document.getElementById("signupBtn");
+        let signinBtn = document.getElementById("signinBtn");
+        let nameField = document.getElementById("nameField");
+        let title = document.getElementById("title");
+         
+
+       signinBtn.onclick = function(){
+        nameField.style.maxHeight = "0";
+        title.innerHTML = "Sigin In";
+        signupBtn.classList.add("disable");
+        signinBtn.classList.remove("disable");
+
+
+        signupBtn.onclick = function(){
+        nameField.style.maxHeight = "60px";
+        title.innerHTML = "Sigin Up";
+        signupBtn.classList.remove("disable");
+        signinBtn.classList.add("disable");
+
+ }
+    </script>
+</body>
+</html>
